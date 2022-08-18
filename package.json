@@ -9,7 +9,9 @@
   "scripts": {
     "start": "webpack serve --config ./webpack.dev.config.js",
     "build": "webpack --config ./webpack.prod.config.js",
-    "test": "jest"
+    "test": "jest",
+    "lint:watch": "eslint .",
+    "lint:fix": "eslint --fix --ext .js,.jsx,.ts,.tsx ."
   },
   "dependencies": {
     "react": "^18.2.0",
@@ -26,11 +28,22 @@
     "@pmmmwh/react-refresh-webpack-plugin": "^0.5.7",
     "@testing-library/jest-dom": "^5.16.5",
     "@testing-library/react": "^13.3.0",
+    "@typescript-eslint/eslint-plugin": "^5.33.1",
+    "babel-eslint": "^10.1.0",
     "babel-jest": "^28.1.3",
     "babel-loader": "^8.2.5",
     "copy-webpack-plugin": "^11.0.0",
     "css-loader": "^6.7.1",
     "dotenv-webpack": "^8.0.1",
+    "eslint": "^8.22.0",
+    "eslint-config-prettier": "^8.5.0",
+    "eslint-config-react": "^1.1.7",
+    "eslint-config-standard-with-typescript": "^22.0.0",
+    "eslint-plugin-import": "^2.26.0",
+    "eslint-plugin-n": "^15.2.4",
+    "eslint-plugin-promise": "^6.0.0",
+    "eslint-plugin-react": "^7.30.1",
+    "eslint-webpack-plugin": "^3.2.0",
     "html-webpack-plugin": "^5.5.0",
     "identity-obj-proxy": "^3.0.0",
     "jest": "^28.1.3",
@@ -41,6 +54,7 @@
     "style-loader": "^3.3.1",
     "thread-loader": "^3.0.4",
     "ts-jest": "^28.0.8",
+    "typescript": "^4.7.4",
     "webpack-dev-server": "^4.10.0",
     "webpack-merge": "^5.8.0"
   }
