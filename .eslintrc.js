@@ -3,13 +3,18 @@ module.exports = {
     browser: true,
     es2021: true
   },
-  extends: ['plugin:react/recommended', 'standard-with-typescript'],
+  extends: [
+    'plugin:react/recommended',
+    'standard-with-typescript',
+    'plugin:prettier/recommended',
+    'prettier'
+  ],
   overrides: [],
   parserOptions: {
     ecmaVersion: 'latest',
     sourceType: 'module',
     project: ['./tsconfig.json']
   },
-  plugins: ['react', 'eslint-plugin-import'],
+  plugins: ['react'],
   rules: { 'react/react-in-jsx-scope': 'off' }
 }

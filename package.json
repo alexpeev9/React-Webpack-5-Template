@@ -11,7 +11,8 @@
     "build": "webpack --config ./webpack.prod.config.js",
     "test": "jest",
     "lint:watch": "eslint .",
-    "lint:fix": "eslint --fix --ext .js,.jsx,.ts,.tsx ."
+    "lint:fix": "eslint --fix --ext .js,.jsx,.ts,.tsx .",
+    "format": "prettier --write \"./src/**/*.{js,jsx,ts,tsx,json,css,scss,md}\""
   },
   "dependencies": {
     "react": "^18.2.0",
@@ -41,6 +42,7 @@
     "eslint-config-standard-with-typescript": "^22.0.0",
     "eslint-plugin-import": "^2.26.0",
     "eslint-plugin-n": "^15.2.4",
+    "eslint-plugin-prettier": "^4.2.1",
     "eslint-plugin-promise": "^6.0.0",
     "eslint-plugin-react": "^7.30.1",
     "eslint-webpack-plugin": "^3.2.0",
@@ -49,6 +51,7 @@
     "jest": "^28.1.3",
     "jest-environment-jsdom": "^28.1.3",
     "mini-css-extract-plugin": "^2.6.1",
+    "prettier": "^2.7.1",
     "sass": "^1.54.4",
     "sass-loader": "^13.0.2",
     "style-loader": "^3.3.1",
