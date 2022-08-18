@@ -1,5 +1,6 @@
 const DotenvWebpackPlugin = require('dotenv-webpack');
 const HtmlWebpackPlugin = require('html-webpack-plugin');
+const ESLintPlugin = require('eslint-webpack-plugin');
 const path = require('path');
 
 module.exports = {
@@ -29,6 +30,7 @@ module.exports = {
     extensions: ['.tsx', '.ts', '.js'],
   },
   plugins: [
+    new ESLintPlugin(),
     new DotenvWebpackPlugin(),
     new HtmlWebpackPlugin({
       template: './public/index.html',
