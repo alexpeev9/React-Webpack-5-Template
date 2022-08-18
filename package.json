@@ -11,7 +11,8 @@
     "build": "webpack --config ./webpack.prod.config.js",
     "test": "jest",
     "lint:watch": "eslint .",
-    "lint:fix": "eslint --fix --ext .js,.jsx,.ts,.tsx ."
+    "lint:fix": "eslint --fix --ext .js,.jsx,.ts,.tsx .",
+    "format": "prettier --write \"./src/**/*.{js,jsx,ts,tsx,json,css,scss,md}\""
   },
   "dependencies": {
     "react": "^18.2.0",
