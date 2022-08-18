@@ -1,7 +1,7 @@
-const DotenvWebpackPlugin = require('dotenv-webpack');
-const HtmlWebpackPlugin = require('html-webpack-plugin');
-const ESLintPlugin = require('eslint-webpack-plugin');
-const path = require('path');
+const DotenvWebpackPlugin = require('dotenv-webpack')
+const HtmlWebpackPlugin = require('html-webpack-plugin')
+const ESLintPlugin = require('eslint-webpack-plugin')
+const path = require('path')
 
 module.exports = {
   context: __dirname,
@@ -9,7 +9,7 @@ module.exports = {
   output: {
     path: path.resolve(process.cwd(), 'build'),
     publicPath: '/',
-    assetModuleFilename: 'assets/[name][ext]',
+    assetModuleFilename: 'assets/[name][ext]'
   },
   module: {
     rules: [
@@ -17,17 +17,17 @@ module.exports = {
         test: /\.(js|jsx|ts|tsx)$/,
         exclude: /node_modules/,
         include: path.resolve(__dirname, 'src'),
-        use: ['thread-loader', 'babel-loader'],
+        use: ['thread-loader', 'babel-loader']
       },
       {
         test: /\.(png|svg|jpg|jpeg|gif)$/i,
-        type: 'asset/resource',
-      },
-    ],
+        type: 'asset/resource'
+      }
+    ]
   },
   resolve: {
     modules: ['node_modules', 'src'],
-    extensions: ['.tsx', '.ts', '.js'],
+    extensions: ['.tsx', '.ts', '.js']
   },
   plugins: [
     new ESLintPlugin(),
@@ -36,7 +36,7 @@ module.exports = {
       template: './public/index.html',
       filename: './index.html',
       favicon: './public/favicon.ico',
-      inject: true,
-    }),
-  ],
-};
+      inject: true
+    })
+  ]
+}

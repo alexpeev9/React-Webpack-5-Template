@@ -1,9 +1,9 @@
-const { merge } = require('webpack-merge');
-const MiniCssExtractPlugin = require('mini-css-extract-plugin');
+const { merge } = require('webpack-merge')
+const MiniCssExtractPlugin = require('mini-css-extract-plugin')
 
-const commonConfig = require('./webpack.base.config');
+const commonConfig = require('./webpack.base.config')
 
-const CopyPlugin = require('copy-webpack-plugin');
+const CopyPlugin = require('copy-webpack-plugin')
 
 module.exports = () => {
   return merge(commonConfig, {
@@ -11,7 +11,7 @@ module.exports = () => {
     output: {
       filename: '[name].[contenthash:8].js',
       chunkFilename: '[name].[contenthash:8].chunk.js',
-      clean: true,
+      clean: true
     },
     optimization: {
       splitChunks: {
@@ -26,33 +26,33 @@ module.exports = () => {
           defaultVendors: {
             test: /[\\/]node_modules[\\/]/,
             priority: -10,
-            reuseExistingChunk: true,
+            reuseExistingChunk: true
           },
           default: {
             minChunks: 2,
             priority: -20,
-            reuseExistingChunk: true,
-          },
-        },
-      },
+            reuseExistingChunk: true
+          }
+        }
+      }
     },
     module: {
       rules: [
         {
           test: /\.(css)$/,
-          use: [MiniCssExtractPlugin.loader, 'css-loader'],
+          use: [MiniCssExtractPlugin.loader, 'css-loader']
         },
         {
           test: /\.(s(a|c)ss)$/,
-          use: [MiniCssExtractPlugin.loader, 'css-loader', 'sass-loader'],
-        },
-      ],
+          use: [MiniCssExtractPlugin.loader, 'css-loader', 'sass-loader']
+        }
+      ]
     },
     plugins: [
       new MiniCssExtractPlugin(),
       new CopyPlugin({
-        patterns: [{ from: './public/assets', to: 'assets' }],
-      }),
-    ],
-  });
-};
+        patterns: [{ from: './public/assets', to: 'assets' }]
+      })
+    ]
+  })
+}
