@@ -1,7 +1,7 @@
 const { merge } = require('webpack-merge');
-const commonConfig = require('./webpack.base.config');
-const HtmlWebpackPlugin = require('html-webpack-plugin');
 const MiniCssExtractPlugin = require('mini-css-extract-plugin');
+
+const commonConfig = require('./webpack.base.config');
 
 const CopyPlugin = require('copy-webpack-plugin');
 
@@ -49,12 +49,6 @@ module.exports = () => {
       ],
     },
     plugins: [
-      new HtmlWebpackPlugin({
-        template: './public/index.html',
-        filename: './index.html',
-        favicon: './public/favicon.ico',
-        inject: true,
-      }),
       new MiniCssExtractPlugin(),
       new CopyPlugin({
         patterns: [{ from: './public/assets', to: 'assets' }],

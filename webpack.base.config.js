@@ -1,4 +1,5 @@
 const DotenvWebpackPlugin = require('dotenv-webpack');
+const HtmlWebpackPlugin = require('html-webpack-plugin');
 const path = require('path');
 
 module.exports = {
@@ -27,5 +28,13 @@ module.exports = {
     modules: ['node_modules', 'src'],
     extensions: ['.tsx', '.ts', '.js'],
   },
-  plugins: [new DotenvWebpackPlugin()],
+  plugins: [
+    new DotenvWebpackPlugin(),
+    new HtmlWebpackPlugin({
+      template: './public/index.html',
+      filename: './index.html',
+      favicon: './public/favicon.ico',
+      inject: true,
+    }),
+  ],
 };
