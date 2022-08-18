@@ -10,6 +10,11 @@ module.exports = {
     sourceType: 'module',
     project: ['./tsconfig.json']
   },
-  plugins: ['react', 'eslint-plugin-import'],
+  plugins: [
+    'react',
+    'eslint-plugin-import',
+    'plugin:prettier/recommended',
+    'prettier'
+  ],
   rules: { 'react/react-in-jsx-scope': 'off' }
 }
