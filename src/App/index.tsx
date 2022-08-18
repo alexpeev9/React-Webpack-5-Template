@@ -3,10 +3,10 @@ import './style.scss';
 
 const App: React.FC = () => {
   return (
-    <div className='home'>
-      <img src={Logo} alt='logo' />
-      <p>Hello World</p>
-    </div>
+    <>
+      <img src={Logo} className='logo' alt='logo' />
+      <h1>Template</h1>
+    </>
   );
 };
 
