@@ -50,6 +50,8 @@ Example:
 - The **[2-Add-Jest](https://github.com/alexpeev9/React-Webpack-5-Template/tree/2-Add-Jest)** branch has **Webpack** and **Jest**.
 - The **[3-Add-ESLint](https://github.com/alexpeev9/React-Webpack-5-Template/tree/3-Add-ESLint)** branch has **Webpack**, **Jest**, and **ESLint**.
 
+I advise you to use the **main branch** because it is the **most optimized** and **supported**.
+
 ## Deploying
 
 If you are deploying the app to sites like **[Netlify](netlify.com)**, **[Vercel](vercel.com)**, and others be sure to:
