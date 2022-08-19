@@ -48,12 +48,12 @@ There are **five additional branches**, and on each one of them, you can see the
 Example:
 
 - The **[2-Add-Jest](https://github.com/alexpeev9/React-Webpack-5-Template/tree/2-Add-Jest)** branch has **Webpack** and **Jest**.
-- The **[3-Add-ESLint](https://github.com/alexpeev9/React-Webpack-5-Template/tree/3-Add-ESLint)** branch has **Webpack**, **Jest** and **ESLint**.
+- The **[3-Add-ESLint](https://github.com/alexpeev9/React-Webpack-5-Template/tree/3-Add-ESLint)** branch has **Webpack**, **Jest**, and **ESLint**.
 
 ## Deploying
 
 If you are deploying the app to sites like **[Netlify](netlify.com)**, **[Vercel](vercel.com)**, and others be sure to:
 
-- Change **build command** to `npm run build` because some sites don't work with **yarn**.
+- Change the **build command** to `npm run build` because some sites don't work with **yarn**.
 - Define the **publish directory** to `build/`.
-- Set an **environment variable** `NODE_ENV` to `production`, so that it doesn't install the **dev-dependencies**.
+- Set an **environment variable** `NODE_ENV` to `production` so that it doesn't install the **dev-dependencies**.
