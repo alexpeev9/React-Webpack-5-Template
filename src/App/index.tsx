@@ -5,7 +5,7 @@ const App: React.FC = () => {
   return (
     <>
       <img src={Logo} className='logo' alt='logo' />
-      <h1>Template</h1>
+      <h1>React Webpack 5 Template</h1>
     </>
   )
 }
